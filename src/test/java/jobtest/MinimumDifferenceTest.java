@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
-
 public class MinimumDifferenceTest {
 
     MinimumDifference minimumDifference;
@@ -31,6 +30,12 @@ public class MinimumDifferenceTest {
     @Test
     public void inputIs3And5_theResultIs2() {
         int difference = minimumDifference.getMinimumDifference(new int[]{3, 5});
+        assertEquals(2, difference);
+    }
+
+    @Test
+    public void inputIs10And5And3_theResultIs2() {
+        int difference = minimumDifference.getMinimumDifference(new int[]{10, 5, 3});
         assertEquals(2, difference);
     }
 }

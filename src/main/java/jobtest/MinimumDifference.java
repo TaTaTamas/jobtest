@@ -20,7 +20,19 @@ public class MinimumDifference {
 
     public int getMinimumDifference(final int[] numbers) {
         verifyParameters(numbers);
-        return Math.abs(numbers[0] - numbers[1]);
+
+        int firstSmallestNumber = numbers[0];
+        int secondSmallestNumber  = numbers[1];
+        for (int i = 2; i < numbers.length; i++) {
+            if (numbers[i] < firstSmallestNumber) {
+                firstSmallestNumber = numbers[i];
+            } else if (numbers[i] < secondSmallestNumber) {
+                secondSmallestNumber = numbers[i];
+            }
+        }
+
+
+        return Math.abs(firstSmallestNumber - secondSmallestNumber);
     }
 
     private void verifyParameters(final int[] numbers) {
