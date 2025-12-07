@@ -28,4 +28,9 @@ public class MinimumDifferenceTest {
         assertEquals(2, difference);
     }
 
+    @Test
+    public void inputIs3And5_theResultIs2() {
+        int difference = minimumDifference.getMinimumDifference(new int[]{3, 5});
+        assertEquals(2, difference);
+    }
 }

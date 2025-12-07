@@ -20,7 +20,7 @@ public class MinimumDifference {
 
     public int getMinimumDifference(final int[] numbers) {
         verifyParameters(numbers);
-        return numbers[0] - numbers[1];
+        return Math.abs(numbers[0] - numbers[1]);
     }
 
     private void verifyParameters(final int[] numbers) {
