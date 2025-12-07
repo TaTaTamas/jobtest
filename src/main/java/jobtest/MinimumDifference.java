@@ -18,10 +18,14 @@ package jobtest;
 
 public class MinimumDifference {
 
-    public int getMinimumDifference(final int[] arr) {
-        if (arr == null || arr.length < 2) {
+    public int getMinimumDifference(final int[] numbers) {
+        verifyParameters(numbers);
+        return numbers[0] - numbers[1];
+    }
+
+    private void verifyParameters(final int[] numbers) {
+        if (numbers == null || numbers.length < 2) {
             throw new IllegalArgumentException();
         }
-        return 0;
     }
 }
