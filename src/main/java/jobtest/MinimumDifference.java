@@ -1,5 +1,8 @@
 package jobtest;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Minimum Difference
  * <p>
@@ -22,7 +25,7 @@ public class MinimumDifference {
         verifyParameters(numbers);
 
         int firstSmallestNumber = numbers[0];
-        int secondSmallestNumber  = numbers[1];
+        int secondSmallestNumber = numbers[1];
         for (int i = 2; i < numbers.length; i++) {
             if (numbers[i] < firstSmallestNumber) {
                 firstSmallestNumber = numbers[i];
@@ -30,9 +33,13 @@ public class MinimumDifference {
                 secondSmallestNumber = numbers[i];
             }
         }
-
-
         return Math.abs(firstSmallestNumber - secondSmallestNumber);
+    }
+
+    public int getMinimumDifferenceWithSorting(final int[] numbers) {
+        verifyParameters(numbers);
+        List<Integer> sortedNumbers = Arrays.stream(numbers).boxed().sorted().toList();
+        return Math.abs(sortedNumbers.get(0) - sortedNumbers.get(1));
     }
 
     private void verifyParameters(final int[] numbers) {

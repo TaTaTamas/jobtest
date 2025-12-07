@@ -38,4 +38,16 @@ public class MinimumDifferenceTest {
         int difference = minimumDifference.getMinimumDifference(new int[]{10, 5, 3});
         assertEquals(2, difference);
     }
+
+    @Test
+    public void inputIs10And5And3_theResultIs2_withSorting() {
+        int difference = minimumDifference.getMinimumDifferenceWithSorting(new int[]{10, 5, 3});
+        assertEquals(2, difference);
+    }
+
+    @Test
+    public void inputIsMinus10And5AndMinus3_theResultIs7_withSorting() {
+        assertEquals(7, minimumDifference.getMinimumDifferenceWithSorting(new int[]{-10, 5, -3}));
+        assertEquals(7, minimumDifference.getMinimumDifference(new int[]{-10, 5, -3}));
+    }
 }
