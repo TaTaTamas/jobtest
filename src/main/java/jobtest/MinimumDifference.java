@@ -27,7 +27,13 @@ public class MinimumDifference {
         int firstSmallestNumber = numbers[0];
         int secondSmallestNumber = numbers[1];
         for (int i = 2; i < numbers.length; i++) {
+            if (secondSmallestNumber < firstSmallestNumber) {
+                int temp = firstSmallestNumber;
+                firstSmallestNumber = secondSmallestNumber;
+                secondSmallestNumber = temp;
+            }
             if (numbers[i] < firstSmallestNumber) {
+                secondSmallestNumber = firstSmallestNumber;
                 firstSmallestNumber = numbers[i];
             } else if (numbers[i] < secondSmallestNumber) {
                 secondSmallestNumber = numbers[i];

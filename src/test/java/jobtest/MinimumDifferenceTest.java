@@ -50,4 +50,10 @@ public class MinimumDifferenceTest {
         assertEquals(7, minimumDifference.getMinimumDifferenceWithSorting(new int[]{-10, 5, -3}));
         assertEquals(7, minimumDifference.getMinimumDifference(new int[]{-10, 5, -3}));
     }
+
+    @Test
+    public void inputIs30And20And10And15And5_theResultIs5() {
+        int difference = minimumDifference.getMinimumDifference(new int[]{30, 20, 10, 15, 5});
+        assertEquals(5, difference);
+    }
 }
