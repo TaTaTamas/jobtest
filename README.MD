@@ -1,7 +1,6 @@
-Quick project generation with Maven => mvn archetype:generate
+Run test and make it available for next project on local =>
+<br>mvn clean install
 
-Run test with Maven => mvn clean compile test
-
-Make jar with Maven => mvn package
-
-make it available for next project on local => mvn install
+REMINDER:
+<br>Quick project generation with Maven =>
+<br>mvn archetype:generate

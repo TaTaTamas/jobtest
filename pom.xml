@@ -60,4 +60,11 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/TaTaTamas/jobtest</url>
+    </repository>
+  </distributionManagement>
 </project>
