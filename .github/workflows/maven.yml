@@ -38,3 +38,5 @@ jobs:
         run: mvn clean install
       - name: Deploy
         run: mvn deploy -DskipTests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
